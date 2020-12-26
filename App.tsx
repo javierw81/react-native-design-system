@@ -6,7 +6,9 @@ import { theme } from "./src/themes/theme";
 import { ThemeProvider } from 'styled-components/native';
 import * as Font from 'expo-font';
 
-export default function App() {
+export { default } from './storybook';
+
+/*export default function App() {
   useEffect(() => {
     Font.loadAsync({
       'Montserrat-Regular': require('./assets/fonts/Montserrat-Regular.ttf'),
@@ -28,5 +30,5 @@ export default function App() {
       </ThemeProvider>
     </>
   );
-}
+}*/
 
