@@ -1,13 +1,14 @@
 // if you use expo remove this line
-import { AppRegistry } from 'react-native';
+//import { AppRegistry } from 'react-native';
 import { name as appName } from '../app.json';
-import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
+import { getStorybookUI, configure } from '@storybook/react-native';
+import { loadStories } from './storyLoader'
 
 import './rn-addons';
 
 // import stories
 configure(() => {
-  require('./stories');
+  loadStories();
 }, module);
 
 // Refer to https://github.com/storybookjs/storybook/tree/master/app/react-native#start-command-parameters
