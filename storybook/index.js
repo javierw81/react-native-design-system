@@ -32,7 +32,4 @@ const StorybookUIRoot = getStorybookUI({
 // If you use Expo you should remove this line.
 //AppRegistry.registerComponent(appName, () => StorybookUIRoot);
 
-
-
-
 export default StorybookUIRoot;
