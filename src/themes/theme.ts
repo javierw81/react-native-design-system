@@ -11,7 +11,9 @@ export const theme = {
     weight: 'normal',
     color: fontColorLight,
     size: {
-      default: '16px'
+      default: 16,
+      title: 20,
+      subtitle: 18
     }
   },
   border: {
