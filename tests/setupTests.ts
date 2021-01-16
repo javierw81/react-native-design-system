@@ -4,7 +4,7 @@ import Adapter from 'enzyme-adapter-react-16'
 /**
  * Set up DOM in node.js environment for Enzyme to mount to
  */
-const { JSDOM } = require('jsdom');
+import { JSDOM } from 'jsdom'
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;
@@ -41,5 +41,6 @@ Enzyme.configure({ adapter: new Adapter() });
 
 jest.mock('global', () => ({
     ...global,
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     WebSocket: function WebSocket() { },
 }));

@@ -23,11 +23,11 @@ const StyledButtonText = styled.Text<IStyledProps>`
   text-align: center; 
 `;
 
-interface ButtonInterface extends ReactNative.TouchableOpacityProps, IStyledProps {
+interface ButtonProps extends ReactNative.TouchableOpacityProps, IStyledProps {
 	title: string;
 }
 
-export const Button: React.FC<ButtonInterface> = (props) =>
+export const Button: React.FC<ButtonProps> = (props: ButtonProps) =>
 	<StyledButton {...props} >
 		<StyledButtonText {...(props as IStyledProps)}>{props.title}</StyledButtonText>
 	</StyledButton>
