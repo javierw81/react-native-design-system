@@ -27,9 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run Linter
-        run: npm run eslint
-      - name: Build
-        run: npm run build
+        run: npm run eslint      
       - name: Run Test
         run: npm run test
      
