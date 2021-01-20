@@ -7,5 +7,15 @@ module.exports = {
     testEnvironment: "enzyme",
     testEnvironmentOptions: {
         enzymeAdapter: "react16"
+    },
+    collectCoverage: true,
+    coverageReporters: ["text-summary"],
+    coverageThreshold: {
+        "global": {
+            "branches": 70,
+            "functions": 70,
+            "lines": 70,
+            "statements": 70
+        }
     }
 }

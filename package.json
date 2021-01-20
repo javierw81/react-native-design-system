@@ -9,7 +9,8 @@
     "prestorybook": "rnstl",
     "storybook": "(adb reverse tcp:9009 tcp:9009 || true) && start-storybook -p 9009",
     "build-storybook": "build-storybook",
-    "test": "jest --passWithNoTests",
+    "test": "jest",
+    "test:coverage": "jest --coverageReporters=text",
     "eslint": "./node_modules/.bin/eslint .",
     "eslintfix": "./node_modules/.bin/eslint . --fix"
   },

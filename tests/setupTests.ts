@@ -24,11 +24,12 @@ global.navigator = {
 copyProps(window, global);
 
 function suppressDomErrors() {
-    const suppressedErrors = /(React does not recognize the.*prop on a DOM element|Unknown event handler property|is using uppercase HTML|Received `true` for a non-boolean attribute `accessible`|The tag.*is unrecognized in this browser|PascalCase)/;
+    const suppressedErrors = /(React does not recognize the.*prop on a DOM element|Unknown event handler property|is using uppercase HTML|Received `true` for a non-boolean attribute `accessible`|Warning: Received `%s` for a non-boolean attribute `%s`|The tag.*is unrecognized in this browser|PascalCase)/;
+
     // eslint-disable-next-line no-console
     const realConsoleError = console.error;
     // eslint-disable-next-line no-console
-    console.error = message => {
+    console.error = (message: string) => {
         if (message.match(suppressedErrors)) {
             return;
         }

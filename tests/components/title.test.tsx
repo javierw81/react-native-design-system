@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
-import { themeMock } from './mocks/theme'
+import { themeMock } from '../mocks/theme'
 import { ThemeProvider } from 'styled-components/native';
-import { Title, Subtitle, View } from "../src"
+import { Title, Subtitle, View } from "../../src"
 
 describe('Title', () => {
 
